@@ -1,0 +1,306 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Campus Pulse - Register for student access, campus services, and student support online.">
+    <title>Student Enrollment | Campus Pulse</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Shared CSS + auth CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+
+        <div class="logo">
+            <h2>CAMPUS <span>PULSE</span></h2>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+
+        <nav id="primary-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../About/about.html">About</a></li>
+                <li><a href="../Gallary/Gallary.html">Gallery</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li class="mobile-join"><a href="Sign up.html" class="active">Enroll</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions" id="headerActions">
+            <a href="../Login/Login.html" class="login-btn-outline">Login</a>
+            <a href="Sign up.html" class="join-btn">Enroll</a>
+        </div>
+
+    </header>
+
+    <!-- ================= PAGE CONTENT ================= -->
+    <div class="signup-page-wrapper">
+        <div class="signup-container fade-in">
+
+            <!-- Step Progress Indicator -->
+            <div class="step-progress" aria-label="Registration progress">
+                <div class="step-item active" data-step="1">
+                    <div class="step-badge">1</div>
+                    <span class="step-label">Your Details</span>
+                </div>
+                <div class="step-connector" id="connector1"></div>
+                <div class="step-item" data-step="2">
+                    <div class="step-badge">2</div>
+                    <span class="step-label">Security</span>
+                </div>
+                <div class="step-connector" id="connector2"></div>
+                <div class="step-item" data-step="3">
+                    <div class="step-badge">3</div>
+                    <span class="step-label">Review</span>
+                </div>
+            </div>
+
+            <!-- Left Summary Panel -->
+            <div class="signup-summary-panel">
+                <div>
+                    <div class="signup-summary-header">
+                        <h2>Select Your Student Plan</h2>
+                        <p>Choose a student experience package and unlock campus support.</p>
+                    </div>
+
+                    <div class="plan-select-pills">
+                        <button type="button" class="plan-pill-option" data-plan="Campus Basic" data-price="₹1,999/mo" onclick="selectPlanPill(this)">
+                            <div class="plan-pill-info">
+                                <h4>Campus Basic</h4>
+                                <p>Student resources and event updates</p>
+                            </div>
+                            <div class="plan-pill-price">₹1,999/mo</div>
+                        </button>
+
+                        <button type="button" class="plan-pill-option active" data-plan="Academic Pro" data-price="₹3,999/mo" onclick="selectPlanPill(this)">
+                            <div class="plan-pill-info">
+                                <h4>Academic Pro <span class="popular-tag">POPULAR</span></h4>
+                                <p>Mentorship, workshops, and campus perks</p>
+                            </div>
+                            <div class="plan-pill-price">₹3,999/mo</div>
+                        </button>
+
+                        <button type="button" class="plan-pill-option" data-plan="Campus Premium" data-price="₹6,999/mo" onclick="selectPlanPill(this)">
+                            <div class="plan-pill-info">
+                                <h4>Campus Premium</h4>
+                                <p>Full student support, leadership events, plus coaching</p>
+                            </div>
+                            <div class="plan-pill-price">₹6,999/mo</div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="summary-note">
+                    <i class="fa-solid fa-shield-halved"></i> 30-Day Money Back Satisfaction Guarantee.<br>
+                    <i class="fa-solid fa-clock"></i> Instant activation once registration is complete.
+                </div>
+            </div>
+
+            <!-- Right Registration Form Panel -->
+            <form id="standaloneSignupForm" class="signup-form-panel" novalidate>
+
+                <!-- Step 1: Your Details -->
+                <div class="form-step active" data-step="1">
+                    <div class="signup-form-header">
+                        <h2>Your Details</h2>
+                        <p>Tell us about yourself — it only takes a minute.</p>
+                    </div>
+
+                    <div class="step-title"><i class="fa-solid fa-user"></i> Personal Information</div>
+
+                    <div class="form-group">
+                        <label for="regName">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user left-icon"></i>
+                            <input type="text" id="regName" placeholder="John Doe">
+                        </div>
+                        <span class="field-error" id="regNameError"><i class="fa-solid fa-circle-exclamation"></i> Please enter your full name.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regEmail">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope left-icon"></i>
+                            <input type="email" id="regEmail" placeholder="yourname@gmail.com">
+                        </div>
+                        <span class="field-error" id="regEmailError"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email address.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regPhone">Phone Number</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone left-icon"></i>
+                            <input type="tel" id="regPhone" placeholder="+91 98765 43210">
+                        </div>
+                        <span class="field-error" id="regPhoneError"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid phone number.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regBranch">Preferred Campus Location</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-location-dot left-icon"></i>
+                            <select id="regBranch">
+                                <option value="Main Student Center">Main Student Center</option>
+                                <option value="Library Hub">Library Hub</option>
+                                <option value="Innovation Lab">Innovation Lab</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-nav-buttons">
+                        <button type="button" class="primary-btn" onclick="nextStep()">Continue <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Security -->
+                <div class="form-step" data-step="2">
+                    <div class="signup-form-header">
+                        <h2>Secure Your Account</h2>
+                        <p>Create a strong password to protect your student profile.</p>
+                    </div>
+
+                    <div class="step-title"><i class="fa-solid fa-lock"></i> Account Security</div>
+
+                    <div class="form-group">
+                        <label for="regPassword">Account Password</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock left-icon"></i>
+                            <input type="password" id="regPassword" placeholder="Minimum 8 characters">
+                            <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+                            <span class="strength-label" id="strengthLabel">Password strength: <strong id="strengthText">Too weak</strong></span>
+                        </div>
+                        <span class="field-error" id="regPasswordError"><i class="fa-solid fa-circle-exclamation"></i> Password must be at least 8 characters.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock left-icon"></i>
+                            <input type="password" id="regConfirmPassword" placeholder="Re-enter your password">
+                            <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="field-error" id="regConfirmPasswordError"><i class="fa-solid fa-circle-exclamation"></i> Passwords do not match.</span>
+                    </div>
+
+                    <div class="form-nav-buttons">
+                        <button type="button" class="back-btn" onclick="prevStep()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                        <button type="button" class="primary-btn" onclick="nextStep()">Continue <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Review & Complete -->
+                <div class="form-step" data-step="3">
+                    <div class="signup-form-header">
+                        <h2>Review &amp; Complete</h2>
+                        <p>Check your details before activating your student profile.</p>
+                    </div>
+
+                    <div class="step-title"><i class="fa-solid fa-clipboard-check"></i> Enrollment Summary</div>
+
+                    <div class="review-card" id="reviewCard">
+                        <div class="review-row">
+                            <span><i class="fa-solid fa-user"></i> Name</span>
+                            <strong id="reviewName">—</strong>
+                        </div>
+                        <div class="review-row">
+                            <span><i class="fa-solid fa-envelope"></i> Email</span>
+                            <strong id="reviewEmail">—</strong>
+                        </div>
+                        <div class="review-row">
+                            <span><i class="fa-solid fa-phone"></i> Phone</span>
+                            <strong id="reviewPhone">—</strong>
+                        </div>
+                        <div class="review-row">
+                            <span><i class="fa-solid fa-location-dot"></i> Location</span>
+                            <strong id="reviewBranch">—</strong>
+                        </div>
+                        <div class="review-row">
+                            <span><i class="fa-solid fa-crown"></i> Plan</span>
+                            <strong id="reviewPlan" style="color: var(--primary);">—</strong>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:13px; color:var(--text-muted);">
+                            <input type="checkbox" id="termsCheck" checked> I agree to the <a href="#" style="color:var(--primary);">Terms &amp; Conditions</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="primary-btn" style="width: 100%; margin-top: 4px;">
+                        <i class="fa-solid fa-check"></i> Complete Campus Enrollment
+                    </button>
+
+                    <div class="form-nav-buttons" style="margin-top: 10px;">
+                        <button type="button" class="back-btn" onclick="prevStep()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                    </div>
+                </div>
+
+                <!-- Social Sign Up -->
+                <div class="social-auth">
+                    <div class="social-auth-title">Or sign up with</div>
+                    <div class="social-btns">
+                        <a href="#" class="social-btn" onclick="socialSignup('Google'); return false;">
+                            <i class="fab fa-google" style="color:#ea4335;"></i> Google
+                        </a>
+                        <a href="#" class="social-btn" onclick="socialSignup('Apple'); return false;">
+                            <i class="fab fa-apple"></i> Apple
+                        </a>
+                    </div>
+                </div>
+
+                <div class="signin-link">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    Already have an active profile? <a href="../Login/Login.html">Sign In Here</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-content">
+            <h2>CAMPUS <span>PULSE</span></h2>
+            <p>Learn More • Get Involved • Grow Together</p>
+            <div class="social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>© <span data-year>2026</span> Campus Pulse. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ONE shared JS file -->
+    <script defer src="../js/main.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus Pulse Gallery - Explore campus spaces, events, and student life.">
+    <title>Gallery | Campus Pulse</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Shared CSS + page CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+
+        <div class="logo">
+            <h2>CAMPUS <span>PULSE</span></h2>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+
+        <nav id="primary-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../About/about.html">About</a></li>
+                <li><a href="Gallary.html" class="active">Gallery</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li class="mobile-join"><a href="../Signup/Sign up.html">Enroll</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions" id="headerActions">
+            <a href="../Login/Login.html" class="login-btn-outline">Login</a>
+            <a href="../Signup/Sign up.html" class="join-btn">Enroll</a>
+        </div>
+
+    </header>
+
+    <!-- ================= PAGE TITLE ================= -->
+    <section class="gallery-banner">
+        <h1>OUR GALLERY</h1>
+        <p>Take a glimpse inside Campus Pulse — student life, learning spaces, and campus events.</p>
+    </section>
+
+    <!-- ================= FILTER ================= -->
+    <section class="gallery-filter">
+        <button type="button" class="active" data-filter="all">All</button>
+        <button type="button" data-filter="campus">Campus</button>
+        <button type="button" data-filter="study">Study</button>
+        <button type="button" data-filter="events">Events</button>
+        <button type="button" data-filter="clubs">Clubs</button>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="gallery-container">
+
+        <div class="gallery-item campus" data-title="Study Hub">
+            <img src="../images/gallery-workout-zone.svg" alt="Study Hub" loading="lazy">
+            <div class="overlay">
+                <h3>Study Hub</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item study" data-title="Collaborative Space">
+            <img src="../images/gallery-strength-area.svg" alt="Collaborative Space" loading="lazy">
+            <div class="overlay">
+                <h3>Collaborative Space</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item events" data-title="Event Hall">
+            <img src="../images/gallery-cardio-section.svg" alt="Event Hall" loading="lazy">
+            <div class="overlay">
+                <h3>Event Hall</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item clubs" data-title="Club Meetings">
+            <img src="../images/gallery-professional-trainers.svg" alt="Club Meetings" loading="lazy">
+            <div class="overlay">
+                <h3>Club Meetings</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item campus" data-title="Study Lounge">
+            <img src="../images/gallery-premium-equipment.svg" alt="Study Lounge" loading="lazy">
+            <div class="overlay">
+                <h3>Study Lounge</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item events" data-title="Campus Events">
+            <img src="../images/gallery-treadmill-zone.svg" alt="Campus Events" loading="lazy">
+            <div class="overlay">
+                <h3>Campus Events</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item study" data-title="Resource Center">
+            <img src="../images/gallery-free-weights.svg" alt="Resource Center" loading="lazy">
+            <div class="overlay">
+                <h3>Resource Center</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item clubs" data-title="Student Leadership">
+            <img src="../images/gallery-personal-training.svg" alt="Student Leadership" loading="lazy">
+            <div class="overlay">
+                <h3>Student Leadership</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item campus" data-title="Campus Culture">
+            <img src="../images/gallery-fitness-lifestyle.svg" alt="Campus Culture" loading="lazy">
+            <div class="overlay">
+                <h3>Campus Culture</h3>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ================= LIGHTBOX ================= -->
+    <div class="lightbox" role="dialog" aria-modal="true">
+        <span class="close" aria-label="Close">&times;</span>
+        <img class="lightbox-img" src="" alt="Selected gallery image">
+        <p class="lightbox-caption"></p>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-content">
+            <h2>CAMPUS <span>PULSE</span></h2>
+            <p>Learn More • Get Involved • Grow Together</p>
+            <div class="social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>© <span data-year>2026</span> Campus Pulse. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ONE shared JS file -->
+    <script defer src="../js/main.js"></script>
+</body>
+
+</html>
+
