@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Campus Pulse Gallery - Explore campus spaces, events, and student life.">
-    <title>Gallery | Campus Pulse</title>
+    <meta name="description" content="Iron Pulse Gym Gallery - Explore our training zones, classes, and the energy of the gym floor.">
+    <title>Gallery | Iron Pulse Gym</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- Shared CSS + page CSS -->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
 </head>
 
 <body>
@@ -26,7 +26,9 @@
     <header>
 
         <div class="logo">
-            <h2>CAMPUS <span>PULSE</span></h2>
+            <a href="index.html" aria-label="Iron Pulse Gym - Home">
+                <h2>IRON <span>PULSE</span></h2>
+            </a>
         </div>
 
         <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
@@ -37,99 +39,99 @@
 
         <nav id="primary-nav" aria-label="Primary navigation">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../About/about.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="Gallary.html" class="active">Gallery</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-                <li class="mobile-join"><a href="../Signup/Sign up.html">Enroll</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li class="mobile-join"><a href="Signup.html">Join Now</a></li>
             </ul>
         </nav>
 
         <div class="nav-actions" id="headerActions">
-            <a href="../Login/Login.html" class="login-btn-outline">Login</a>
-            <a href="../Signup/Sign up.html" class="join-btn">Enroll</a>
+            <a href="Login.html" class="login-btn-outline">Login</a>
+            <a href="Signup.html" class="join-btn">Join Now</a>
         </div>
 
     </header>
 
     <!-- ================= PAGE TITLE ================= -->
     <section class="gallery-banner">
-        <h1>OUR GALLERY</h1>
-        <p>Take a glimpse inside Campus Pulse — student life, learning spaces, and campus events.</p>
+        <h1>THE IRON TEMPLE</h1>
+        <p>Step inside Iron Pulse — training zones, high-energy classes, and the raw atmosphere of the gym floor.</p>
     </section>
 
     <!-- ================= FILTER ================= -->
     <section class="gallery-filter">
         <button type="button" class="active" data-filter="all">All</button>
-        <button type="button" data-filter="campus">Campus</button>
-        <button type="button" data-filter="study">Study</button>
-        <button type="button" data-filter="events">Events</button>
-        <button type="button" data-filter="clubs">Clubs</button>
+        <button type="button" data-filter="strength">Strength</button>
+        <button type="button" data-filter="cardio">Cardio</button>
+        <button type="button" data-filter="classes">Classes</button>
+        <button type="button" data-filter="recovery">Recovery</button>
     </section>
 
     <!-- ================= GALLERY ================= -->
     <section class="gallery-container">
 
-        <div class="gallery-item campus" data-title="Study Hub">
-            <img src="../images/gallery-workout-zone.svg" alt="Study Hub" loading="lazy">
+        <div class="gallery-item strength" data-title="Power Rack Zone">
+            <img src="images/gallery-workout-zone.svg" alt="Power rack zone with barbells" loading="lazy">
             <div class="overlay">
-                <h3>Study Hub</h3>
+                <h3>Power Rack Zone</h3>
             </div>
         </div>
 
-        <div class="gallery-item study" data-title="Collaborative Space">
-            <img src="../images/gallery-strength-area.svg" alt="Collaborative Space" loading="lazy">
+        <div class="gallery-item strength" data-title="Free Weights Area">
+            <img src="images/gallery-strength-area.svg" alt="Free weights area" loading="lazy">
             <div class="overlay">
-                <h3>Collaborative Space</h3>
+                <h3>Free Weights Area</h3>
             </div>
         </div>
 
-        <div class="gallery-item events" data-title="Event Hall">
-            <img src="../images/gallery-cardio-section.svg" alt="Event Hall" loading="lazy">
+        <div class="gallery-item cardio" data-title="Cardio Arena">
+            <img src="images/gallery-cardio-section.svg" alt="Cardio arena with treadmills" loading="lazy">
             <div class="overlay">
-                <h3>Event Hall</h3>
+                <h3>Cardio Arena</h3>
             </div>
         </div>
 
-        <div class="gallery-item clubs" data-title="Club Meetings">
-            <img src="../images/gallery-professional-trainers.svg" alt="Club Meetings" loading="lazy">
+        <div class="gallery-item classes" data-title="Group Classes">
+            <img src="images/gallery-professional-trainers.svg" alt="Group training class in session" loading="lazy">
             <div class="overlay">
-                <h3>Club Meetings</h3>
+                <h3>Group Classes</h3>
             </div>
         </div>
 
-        <div class="gallery-item campus" data-title="Study Lounge">
-            <img src="../images/gallery-premium-equipment.svg" alt="Study Lounge" loading="lazy">
+        <div class="gallery-item strength" data-title="Squat Racks">
+            <img src="images/gallery-premium-equipment.svg" alt="Premium squat racks" loading="lazy">
             <div class="overlay">
-                <h3>Study Lounge</h3>
+                <h3>Squat Racks</h3>
             </div>
         </div>
 
-        <div class="gallery-item events" data-title="Campus Events">
-            <img src="../images/gallery-treadmill-zone.svg" alt="Campus Events" loading="lazy">
+        <div class="gallery-item cardio" data-title="Treadmill Zone">
+            <img src="images/gallery-treadmill-zone.svg" alt="Treadmill running zone" loading="lazy">
             <div class="overlay">
-                <h3>Campus Events</h3>
+                <h3>Treadmill Zone</h3>
             </div>
         </div>
 
-        <div class="gallery-item study" data-title="Resource Center">
-            <img src="../images/gallery-free-weights.svg" alt="Resource Center" loading="lazy">
+        <div class="gallery-item strength" data-title="Dumbbell Racks">
+            <img src="images/gallery-free-weights.svg" alt="Dumbbell rack section" loading="lazy">
             <div class="overlay">
-                <h3>Resource Center</h3>
+                <h3>Dumbbell Racks</h3>
             </div>
         </div>
 
-        <div class="gallery-item clubs" data-title="Student Leadership">
-            <img src="../images/gallery-personal-training.svg" alt="Student Leadership" loading="lazy">
+        <div class="gallery-item recovery" data-title="Recovery Lab">
+            <img src="images/gallery-personal-training.svg" alt="Recovery and mobility zone" loading="lazy">
             <div class="overlay">
-                <h3>Student Leadership</h3>
+                <h3>Recovery Lab</h3>
             </div>
         </div>
 
-        <div class="gallery-item campus" data-title="Campus Culture">
-            <img src="../images/gallery-fitness-lifestyle.svg" alt="Campus Culture" loading="lazy">
+        <div class="gallery-item classes" data-title="HIIT Sessions">
+            <img src="images/gallery-fitness-lifestyle.svg" alt="High intensity interval training" loading="lazy">
             <div class="overlay">
-                <h3>Campus Culture</h3>
+                <h3>HIIT Sessions</h3>
             </div>
         </div>
 
@@ -145,20 +147,28 @@
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="footer-content">
-            <h2>CAMPUS <span>PULSE</span></h2>
-            <p>Learn More • Get Involved • Grow Together</p>
+            <h2>IRON <span>PULSE</span></h2>
+            <p>Train Hard • Lift Heavy • Grow Stronger</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="Gallary.html">Gallery</a>
+                <a href="Login.html">Sign In</a>
+                <a href="Signup.html">Join Now</a>
+                <a href="Member.html">Dashboard</a>
+            </div>
             <div class="social">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>© <span data-year>2026</span> Campus Pulse. All Rights Reserved.</p>
+            <p>© <span data-year>2026</span> Iron Pulse Gym. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- ONE shared JS file -->
-    <script defer src="../js/main.js"></script>
+    <!-- Shared JS -->
+    <script defer src="js/main.js"></script>
 </body>
 
 </html>

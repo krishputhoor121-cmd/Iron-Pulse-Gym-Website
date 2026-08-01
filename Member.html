@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iron Pulse Gym Member Dashboard - Your workouts, class bookings, progress tracker, and nutrition plan in one place.">
+    <title>Member Dashboard | Iron Pulse Gym</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Shared CSS + member CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/member.css">
+</head>
+
+<body class="member-page">
+
+    <!-- ================= HEADER ================= -->
+    <header>
+
+        <div class="logo">
+            <a href="index.html" aria-label="Iron Pulse Gym - Home">
+                <h2>IRON <span>PULSE</span></h2>
+            </a>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+
+        <nav id="primary-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Gallary.html">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li class="mobile-join"><a href="Member.html" class="active">Dashboard</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions" id="headerActions">
+            <a href="Member.html" class="login-btn-outline">Dashboard</a>
+            <a href="#" class="join-btn" onclick="logoutMember(); return false;">Logout</a>
+        </div>
+
+    </header>
+
+    <!-- ================= WELCOME BANNER ================= -->
+    <section class="member-banner">
+        <div class="overlay"></div>
+        <div class="member-banner-content">
+            <div class="member-avatar"><i class="fa-solid fa-user"></i></div>
+            <p class="eyebrow">Member Dashboard</p>
+            <h1>WELCOME BACK, <span id="memberName">CHAMPION</span>!</h1>
+            <p>Your iron temple is open. Let's get to work — every rep counts today.</p>
+            <div class="member-badges">
+                <span><i class="fa-solid fa-id-card"></i> Member ID: IRN-2026-0042</span>
+                <span><i class="fa-solid fa-fire"></i> 12-Day Streak</span>
+                <span><i class="fa-solid fa-trophy"></i> Plan: <span id="memberPlan">Strength Pro</span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MEMBER STATS ================= -->
+    <section class="member-stats">
+        <div class="member-stat reveal">
+            <span class="stat-number" data-target="24">0</span>
+            <p>Workouts This Month</p>
+        </div>
+        <div class="member-stat reveal reveal-delay-1">
+            <span class="stat-number" data-target="860">0</span>
+            <p>Calories Burned</p>
+        </div>
+        <div class="member-stat reveal reveal-delay-2">
+            <span class="stat-number" data-target="32">0</span>
+            <p>Classes Booked</p>
+        </div>
+        <div class="member-stat reveal reveal-delay-3">
+            <span class="stat-number" data-target="98">0</span>
+            <p>Goal Completion</p>
+        </div>
+    </section>
+
+    <!-- ================= QUICK ACTIONS ================= -->
+    <section class="member-quick">
+        <h2 class="section-title reveal">Train Like A Champion</h2>
+        <div class="member-grid">
+            <div class="member-card reveal">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h3>Today's Workout</h3>
+                <p>Push Day — Bench, OHP, Triceps. 4 sets each, heavy and focused.</p>
+                <a href="#" class="primary-btn" onclick="showToast('Workout started. Crush it!', 'fa-solid fa-fire'); return false;">Start Session</a>
+            </div>
+            <div class="member-card reveal reveal-delay-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h3>Class Schedule</h3>
+                <p>HIIT Burn — Today 6 PM. Only 4 spots left on the floor.</p>
+                <a href="#" class="secondary-btn" onclick="showToast('Class booked! See you on the floor.', 'fa-solid fa-check'); return false;">Book Class</a>
+            </div>
+            <div class="member-card reveal reveal-delay-2">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Progress Tracker</h3>
+                <p>Your deadlift is up 15% this month. Keep the momentum going.</p>
+                <a href="#" class="secondary-btn" onclick="showToast('Progress loaded. Strong work!', 'fa-solid fa-chart-line'); return false;">View Stats</a>
+            </div>
+            <div class="member-card reveal reveal-delay-3">
+                <i class="fa-solid fa-apple-whole"></i>
+                <h3>Nutrition Plan</h3>
+                <p>High-protein meal plan ready. Daily target: 180g protein.</p>
+                <a href="#" class="secondary-btn" onclick="showToast('Meal plan sent to your email.', 'fa-solid fa-envelope'); return false;">View Plan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROGRESS & SCHEDULE ================= -->
+    <section class="member-progress">
+        <div class="progress-card reveal">
+            <h3><i class="fa-solid fa-chart-simple"></i> Weekly Training Volume</h3>
+            <div class="progress-row">
+                <div class="progress-top"><span>Strength Lifts</span><strong>82%</strong></div>
+                <div class="progress-track"><div class="progress-fill" data-width="82"></div></div>
+            </div>
+            <div class="progress-row">
+                <div class="progress-top"><span>Conditioning</span><strong>64%</strong></div>
+                <div class="progress-track"><div class="progress-fill" data-width="64"></div></div>
+            </div>
+            <div class="progress-row">
+                <div class="progress-top"><span>Mobility &amp; Recovery</span><strong>48%</strong></div>
+                <div class="progress-track"><div class="progress-fill" data-width="48"></div></div>
+            </div>
+            <div class="progress-row">
+                <div class="progress-top"><span>Nutrition Adherence</span><strong>91%</strong></div>
+                <div class="progress-track"><div class="progress-fill" data-width="91"></div></div>
+            </div>
+        </div>
+
+        <div class="progress-card reveal reveal-delay-1">
+            <h3><i class="fa-solid fa-calendar-days"></i> Upcoming Classes</h3>
+            <div class="class-item">
+                <div class="class-day"><strong>6</strong><span>PM</span></div>
+                <div class="class-info">
+                    <h4>HIIT Burn</h4>
+                    <p>Coach Riya · 45 min · Main Floor</p>
+                </div>
+                <span class="class-status">Booked</span>
+            </div>
+            <div class="class-item">
+                <div class="class-day"><strong>8</strong><span>AM</span></div>
+                <div class="class-info">
+                    <h4>Powerlifting Foundations</h4>
+                    <p>Coach Arjun · 60 min · Strength Lab</p>
+                </div>
+                <span class="class-status">Booked</span>
+            </div>
+            <div class="class-item">
+                <div class="class-day"><strong>7</strong><span>PM</span></div>
+                <div class="class-info">
+                    <h4>Yoga &amp; Recovery</h4>
+                    <p>Coach Maya · 45 min · Recovery Lab</p>
+                </div>
+                <span class="class-status">Booked</span>
+            </div>
+            <div class="class-item">
+                <div class="class-day"><strong>5</strong><span>PM</span></div>
+                <div class="class-info">
+                    <h4>CrossFit Open</h4>
+                    <p>Coach Zayn · 60 min · CrossFit Zone</p>
+                </div>
+                <span class="class-status full">Full</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MEMBER PERKS ================= -->
+    <section class="features">
+        <div class="feature-box reveal">
+            <i class="fa-solid fa-hand-fist"></i>
+            <h3>Elite Coaching</h3>
+            <p>Book 1-on-1 sessions with certified trainers who track every lift.</p>
+        </div>
+        <div class="feature-box reveal reveal-delay-1">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>24/7 Access</h3>
+            <p>Your membership unlocks round-the-clock gym floor access.</p>
+        </div>
+        <div class="feature-box reveal reveal-delay-2">
+            <i class="fa-solid fa-medal"></i>
+            <h3>Member Rewards</h3>
+            <p>Earn points per workout and redeem them for merch and nutrition.</p>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-content">
+            <h2>IRON <span>PULSE</span></h2>
+            <p>Train Hard • Lift Heavy • Grow Stronger</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="Gallary.html">Gallery</a>
+                <a href="Login.html">Sign In</a>
+                <a href="Signup.html">Join Now</a>
+                <a href="Member.html">Dashboard</a>
+            </div>
+            <div class="social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>© <span data-year>2026</span> Iron Pulse Gym. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Shared JS -->
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>
+

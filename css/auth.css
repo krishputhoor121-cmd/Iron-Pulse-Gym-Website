@@ -1,0 +1,929 @@
+/* =========================================================
+   IRON PULSE GYM — auth.css (Login / Signup / Logout)
+   ========================================================= */
+
+.auth-page-wrapper,
+.signup-page-wrapper {
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 5%;
+  background:
+    radial-gradient(ellipse at 15% 15%, rgba(255, 107, 26, 0.12), transparent 55%),
+    radial-gradient(ellipse at 85% 85%, #1a2230 0%, transparent 55%),
+    var(--bg);
+}
+
+/* ---------- Shared split card ---------- */
+.auth-split-card {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  max-width: 1040px;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Brand panel ---------- */
+.auth-brand-panel {
+  position: relative;
+  background: var(--grad-dark);
+  border-right: 1px solid var(--border);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.auth-brand-panel::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: var(--primary);
+  filter: blur(90px);
+  opacity: 0.4;
+  animation: floatShape 10s ease-in-out infinite;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.brand-logo i {
+  font-size: 2rem;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-logo h2 {
+  font-size: 1.5rem;
+}
+
+.brand-logo h2 span {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-panel-title {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.brand-panel-title span {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-panel-subtitle {
+  margin-bottom: 34px;
+  font-size: 0.95rem;
+}
+
+.brand-perks {
+  display: grid;
+  gap: 12px;
+}
+
+.brand-perk {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 18px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.brand-perk:hover {
+  transform: translateX(8px);
+  border-color: rgba(255, 107, 26, 0.5);
+  background: rgba(255, 107, 26, 0.06);
+}
+
+.brand-perk i {
+  color: var(--primary-2);
+}
+
+.back-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-home-link:hover {
+  color: var(--primary-2);
+  transform: translateX(-4px);
+}
+
+/* ---------- Auth card panel ---------- */
+.auth-card-panel {
+  padding: 48px 46px;
+}
+
+.auth-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: var(--grad);
+  color: #0b0d10;
+  box-shadow: 0 12px 30px rgba(255, 107, 26, 0.4);
+  margin-bottom: 22px;
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.auth-card-icon.success {
+  background: var(--success);
+  color: #062a1c;
+  box-shadow: 0 12px 30px rgba(46, 229, 157, 0.35);
+}
+
+.auth-card-title {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+}
+
+.auth-card-subtitle {
+  margin-bottom: 26px;
+}
+
+.access-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.access-highlights span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(255, 107, 26, 0.08);
+  border: 1px solid rgba(255, 107, 26, 0.25);
+  color: var(--primary-2);
+}
+
+/* ---------- Auth switch card (login) ---------- */
+.auth-switch-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  margin-bottom: 26px;
+}
+
+.auth-switch-card strong {
+  color: var(--text);
+}
+
+.auth-switch-card p {
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.auth-switch-btn {
+  white-space: nowrap;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: var(--grad);
+  color: #0b0d10;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-switch-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(255, 107, 26, 0.45);
+}
+
+/* ---------- Just joined banner ---------- */
+.just-joined-banner {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: rgba(46, 229, 157, 0.1);
+  border: 1px solid rgba(46, 229, 157, 0.3);
+  color: var(--success);
+  font-size: 0.88rem;
+  margin-bottom: 22px;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.just-joined-banner.show {
+  display: flex;
+}
+
+.just-joined-banner i {
+  font-size: 1.3rem;
+}
+
+/* ---------- Forms ---------- */
+.auth-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper .left-icon {
+  position: absolute;
+  left: 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.input-wrapper:focus-within .left-icon {
+  color: var(--primary-2);
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  width: 100%;
+  padding: 14px 46px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.input-wrapper input::placeholder {
+  color: rgba(154, 163, 175, 0.6);
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(255, 107, 26, 0.14), 0 0 24px rgba(255, 107, 26, 0.12);
+  background: var(--surface-2);
+}
+
+.input-wrapper .toggle-password {
+  position: absolute;
+  right: 14px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.input-wrapper .toggle-password:hover {
+  color: var(--primary-2);
+  transform: scale(1.15);
+}
+
+/* ---------- Form options ---------- */
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.form-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.form-options input[type="checkbox"] {
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
+}
+
+.form-options a {
+  color: var(--primary-2);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.form-options a:hover {
+  color: var(--primary);
+}
+
+/* ---------- Quick login actions ---------- */
+.quick-login-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.quick-login-actions button {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.quick-login-actions button:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  color: var(--primary-2);
+}
+
+.quick-login-actions button i {
+  color: var(--primary-2);
+}
+
+.guest-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.guest-note i {
+  color: var(--primary-2);
+  margin-top: 3px;
+}
+
+/* ---------- Social auth ---------- */
+.social-auth {
+  margin-top: 8px;
+}
+
+.social-auth-title {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.social-auth-title::before,
+.social-auth-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 38%;
+  height: 1px;
+  background: var(--border);
+}
+
+.social-auth-title::before {
+  left: 0;
+}
+.social-auth-title::after {
+  right: 0;
+}
+
+.social-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 107, 26, 0.5);
+  background: rgba(255, 107, 26, 0.06);
+}
+
+.social-btn i {
+  font-size: 1.1rem;
+}
+
+/* ---------- Switch link ---------- */
+.switch-auth-link {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+.switch-auth-link a {
+  color: var(--primary-2);
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.switch-auth-link a:hover {
+  color: var(--primary);
+}
+
+/* =========================================================
+   SIGNUP PAGE
+   ========================================================= */
+.signup-container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* ---- Step progress ---- */
+.step-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  background: var(--surface-2);
+  border: 2px solid var(--border);
+  color: var(--text-muted);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.step-item.active .step-badge {
+  background: var(--grad);
+  border-color: transparent;
+  color: #0b0d10;
+  box-shadow: 0 8px 26px rgba(255, 107, 26, 0.45);
+  transform: scale(1.12);
+}
+
+.step-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.step-item.active .step-label {
+  color: var(--text);
+}
+
+.step-connector {
+  width: 70px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--surface-2);
+  margin: 0 14px 24px;
+  transition: background 0.4s ease;
+}
+
+.step-connector.done {
+  background: var(--grad);
+}
+
+/* ---- Signup split ---- */
+.signup-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 30px;
+}
+
+.signup-summary-panel {
+  background: var(--grad-dark);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-summary-panel::before {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: var(--primary);
+  filter: blur(100px);
+  opacity: 0.35;
+}
+
+.signup-summary-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.signup-summary-header p {
+  font-size: 0.9rem;
+}
+
+.plan-select-pills {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.plan-pill-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid var(--border);
+  text-align: left;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+}
+
+.plan-pill-option:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 107, 26, 0.45);
+}
+
+.plan-pill-option.active {
+  border-color: var(--primary);
+  background: rgba(255, 107, 26, 0.08);
+  box-shadow: 0 10px 30px rgba(255, 107, 26, 0.15);
+}
+
+.plan-pill-info h4 {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.plan-pill-info p {
+  font-size: 0.8rem;
+}
+
+.plan-pill-price {
+  white-space: nowrap;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  color: var(--primary-2);
+}
+
+.popular-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  background: var(--grad);
+  color: #0b0d10;
+  vertical-align: middle;
+}
+
+.summary-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 2.1;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.summary-note i {
+  color: var(--primary-2);
+  margin-right: 8px;
+}
+
+/* ---- Signup form panel ---- */
+.signup-form-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px 34px;
+}
+
+.form-step {
+  display: none;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.signup-form-header {
+  margin-bottom: 22px;
+}
+
+.signup-form-header h2 {
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+}
+
+.signup-form-header p {
+  font-size: 0.9rem;
+}
+
+.step-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary-2);
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---- Field errors ---- */
+.field-error {
+  display: none;
+  font-size: 0.78rem;
+  color: var(--danger);
+  align-items: center;
+  gap: 6px;
+}
+
+.field-error.show {
+  display: flex;
+  animation: fadeInUp 0.3s ease both;
+}
+
+.form-group.error input {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 4px rgba(255, 59, 59, 0.12);
+}
+
+/* ---- Password strength ---- */
+.password-strength {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.strength-bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 6px;
+  background: var(--danger);
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1), background 0.4s ease;
+}
+
+.strength-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ---- Form nav buttons ---- */
+.form-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.back-btn {
+  padding: 14px 30px;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-4px);
+  border-color: var(--primary);
+  color: var(--primary-2);
+}
+
+/* ---- Review card ---- */
+.review-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 22px;
+  margin-bottom: 18px;
+}
+
+.review-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.review-row:last-child {
+  border-bottom: none;
+}
+
+.review-row span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+}
+
+.review-row span i {
+  color: var(--primary-2);
+}
+
+.review-row strong {
+  color: var(--text);
+  text-align: right;
+}
+
+/* ---- Signin link (signup) ---- */
+.signin-link {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.signin-link i {
+  color: var(--primary-2);
+}
+
+.signin-link a {
+  color: var(--primary-2);
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.signin-link a:hover {
+  color: var(--primary);
+}
+
+/* =========================================================
+   LOGOUT PAGE
+   ========================================================= */
+.logout-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.logout-actions .primary-btn,
+.logout-actions .secondary-btn {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 992px) {
+  .auth-split-card {
+    grid-template-columns: 1fr;
+  }
+  .auth-brand-panel {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .signup-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .auth-card-panel,
+  .auth-brand-panel,
+  .signup-form-panel {
+    padding: 28px 22px;
+  }
+  .quick-login-actions,
+  .social-btns {
+    grid-template-columns: 1fr;
+  }
+  .step-connector {
+    width: 34px;
+    margin: 0 8px 24px;
+  }
+  .plan-pill-option {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form-nav-buttons {
+    flex-direction: column-reverse;
+  }
+}
+

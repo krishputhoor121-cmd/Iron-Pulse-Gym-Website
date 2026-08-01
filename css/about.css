@@ -1,0 +1,202 @@
+/* =========================================================
+   IRON PULSE GYM — about.css
+   ========================================================= */
+
+/* ---- About banner ---- */
+.about-banner {
+  min-height: 78vh;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  animation: fadeInUp 0.9s 0.5s ease both;
+}
+
+/* ---- Quote box ---- */
+.quote-box {
+  position: relative;
+  margin-top: 26px;
+  padding: 24px 28px 24px 54px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.quote-box::before {
+  content: "\201C";
+  position: absolute;
+  top: 4px;
+  left: 16px;
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  color: var(--primary);
+  opacity: 0.35;
+}
+
+.quote-box:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.quote-box p {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text);
+}
+
+/* ---- Experience section ---- */
+.experience-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: var(--bg-alt);
+}
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.pill-list span {
+  padding: 9px 18px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+.pill-list span:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  color: var(--primary-2);
+}
+
+.experience-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 34px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s ease;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--grad);
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+}
+
+.experience-card h3 {
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+}
+
+.mini-stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.mini-stat:last-child {
+  border-bottom: none;
+}
+
+.mini-stat strong {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.4rem;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  min-width: 110px;
+}
+
+.mini-stat span {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* ---- Facility section ---- */
+.facility-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.facility-section .about-content ul {
+  grid-template-columns: 1fr;
+}
+
+/* ---- Team gallery (about page) ---- */
+#gallery .gallery {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+#gallery .gallery img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease, border-color 0.4s ease;
+}
+
+#gallery .gallery img:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(255, 107, 26, 0.5);
+  box-shadow: var(--shadow), 0 0 40px rgba(255, 107, 26, 0.25);
+}
+
+/* ---- CTA hero (bottom) ---- */
+section.hero:not(.about-banner):not(.gallery-banner) {
+  min-height: 60vh;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 992px) {
+  .experience-section,
+  .facility-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #gallery .gallery {
+    grid-template-columns: 1fr;
+  }
+  .mini-stat strong {
+    min-width: 90px;
+  }
+}
+

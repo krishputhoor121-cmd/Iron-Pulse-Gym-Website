@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c212a"/>
+      <stop offset="100%" stop-color="#0a0c0f"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b1a"/>
+      <stop offset="100%" stop-color="#ff9d2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="60" y="60" width="680" height="480" rx="24" fill="none" stroke="rgba(255,107,26,0.25)" stroke-width="2"/>
+  <g transform="translate(250,180)">
+    <rect x="0" y="100" width="300" height="22" rx="11" fill="url(#orange)"/>
+    <rect x="40" y="20" width="24" height="120" rx="10" fill="#f4f6f8"/>
+    <rect x="240" y="20" width="24" height="120" rx="10" fill="#f4f6f8"/>
+    <rect x="110" y="60" width="90" height="16" rx="8" fill="#2a2f38"/>
+    <circle cx="320" cy="70" r="38" fill="none" stroke="#9aa3af" stroke-width="12"/>
+  </g>
+  <text x="400" y="520" text-anchor="middle" font-family="Poppins, sans-serif" font-size="30" font-weight="700" letter-spacing="6" fill="#ff9d2e">IRON PULSE GYM</text>
+  <text x="400" y="560" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" letter-spacing="3" fill="#9aa3af">FORGE YOUR BEST SELF</text>
+</svg>
+

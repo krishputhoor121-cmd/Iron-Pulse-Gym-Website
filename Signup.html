@@ -1,23 +1,23 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join Campus Pulse - Register for student access, campus services, and student support online.">
-    <title>Student Enrollment | Campus Pulse</title>
+    <meta name="description" content="Join Iron Pulse Gym - Enroll for gym membership, personal training, and premium fitness programs online.">
+    <title>Membership Enrollment | Iron Pulse Gym</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- Shared CSS + auth CSS -->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
 </head>
 
 <body>
@@ -26,7 +26,9 @@
     <header>
 
         <div class="logo">
-            <h2>CAMPUS <span>PULSE</span></h2>
+            <a href="index.html" aria-label="Iron Pulse Gym - Home">
+                <h2>IRON <span>PULSE</span></h2>
+            </a>
         </div>
 
         <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
@@ -37,17 +39,17 @@
 
         <nav id="primary-nav" aria-label="Primary navigation">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../About/about.html">About</a></li>
-                <li><a href="../Gallary/Gallary.html">Gallery</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-                <li class="mobile-join"><a href="Sign up.html" class="active">Enroll</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Gallary.html">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li class="mobile-join"><a href="Signup.html" class="active">Join Now</a></li>
             </ul>
         </nav>
 
         <div class="nav-actions" id="headerActions">
-            <a href="../Login/Login.html" class="login-btn-outline">Login</a>
-            <a href="Sign up.html" class="join-btn">Enroll</a>
+            <a href="Login.html" class="login-btn-outline">Login</a>
+            <a href="Signup.html" class="join-btn">Join Now</a>
         </div>
 
     </header>
@@ -78,31 +80,31 @@
             <div class="signup-summary-panel">
                 <div>
                     <div class="signup-summary-header">
-                        <h2>Select Your Student Plan</h2>
-                        <p>Choose a student experience package and unlock campus support.</p>
+                        <h2>Select Your Membership</h2>
+                        <p>Choose a training package and unlock the full Iron Pulse experience.</p>
                     </div>
 
                     <div class="plan-select-pills">
-                        <button type="button" class="plan-pill-option" data-plan="Campus Basic" data-price="₹1,999/mo" onclick="selectPlanPill(this)">
+                        <button type="button" class="plan-pill-option" data-plan="Iron Basics" data-price="₹1,999/mo" onclick="selectPlanPill(this)">
                             <div class="plan-pill-info">
-                                <h4>Campus Basic</h4>
-                                <p>Student resources and event updates</p>
+                                <h4>Iron Basics</h4>
+                                <p>Gym floor access and standard equipment</p>
                             </div>
                             <div class="plan-pill-price">₹1,999/mo</div>
                         </button>
 
-                        <button type="button" class="plan-pill-option active" data-plan="Academic Pro" data-price="₹3,999/mo" onclick="selectPlanPill(this)">
+                        <button type="button" class="plan-pill-option active" data-plan="Strength Pro" data-price="₹3,999/mo" onclick="selectPlanPill(this)">
                             <div class="plan-pill-info">
-                                <h4>Academic Pro <span class="popular-tag">POPULAR</span></h4>
-                                <p>Mentorship, workshops, and campus perks</p>
+                                <h4>Strength Pro <span class="popular-tag">POPULAR</span></h4>
+                                <p>Classes, personal training, and recovery perks</p>
                             </div>
                             <div class="plan-pill-price">₹3,999/mo</div>
                         </button>
 
-                        <button type="button" class="plan-pill-option" data-plan="Campus Premium" data-price="₹6,999/mo" onclick="selectPlanPill(this)">
+                        <button type="button" class="plan-pill-option" data-plan="Elite Athlete" data-price="₹6,999/mo" onclick="selectPlanPill(this)">
                             <div class="plan-pill-info">
-                                <h4>Campus Premium</h4>
-                                <p>Full student support, leadership events, plus coaching</p>
+                                <h4>Elite Athlete</h4>
+                                <p>Full access, 1-on-1 coaching, nutrition, and more</p>
                             </div>
                             <div class="plan-pill-price">₹6,999/mo</div>
                         </button>
@@ -155,13 +157,13 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="regBranch">Preferred Campus Location</label>
+                        <label for="regBranch">Preferred Location</label>
                         <div class="input-wrapper">
                             <i class="fa-solid fa-location-dot left-icon"></i>
                             <select id="regBranch">
-                                <option value="Main Student Center">Main Student Center</option>
-                                <option value="Library Hub">Library Hub</option>
-                                <option value="Innovation Lab">Innovation Lab</option>
+                                <option value="Iron Pulse Main Gym">Iron Pulse Main Gym</option>
+                                <option value="Iron Pulse Strength Lab">Iron Pulse Strength Lab</option>
+                                <option value="Iron Pulse CrossFit Zone">Iron Pulse CrossFit Zone</option>
                             </select>
                         </div>
                     </div>
@@ -175,7 +177,7 @@
                 <div class="form-step" data-step="2">
                     <div class="signup-form-header">
                         <h2>Secure Your Account</h2>
-                        <p>Create a strong password to protect your student profile.</p>
+                        <p>Create a strong password to protect your member profile.</p>
                     </div>
 
                     <div class="step-title"><i class="fa-solid fa-lock"></i> Account Security</div>
@@ -218,7 +220,7 @@
                 <div class="form-step" data-step="3">
                     <div class="signup-form-header">
                         <h2>Review &amp; Complete</h2>
-                        <p>Check your details before activating your student profile.</p>
+                        <p>Check your details before activating your membership.</p>
                     </div>
 
                     <div class="step-title"><i class="fa-solid fa-clipboard-check"></i> Enrollment Summary</div>
@@ -253,7 +255,7 @@
                     </div>
 
                     <button type="submit" class="primary-btn" style="width: 100%; margin-top: 4px;">
-                        <i class="fa-solid fa-check"></i> Complete Campus Enrollment
+                        <i class="fa-solid fa-check"></i> Complete Enrollment
                     </button>
 
                     <div class="form-nav-buttons" style="margin-top: 10px;">
@@ -276,7 +278,7 @@
 
                 <div class="signin-link">
                     <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                    Already have an active profile? <a href="../Login/Login.html">Sign In Here</a>
+                    Already have a membership? <a href="Login.html">Sign In Here</a>
                 </div>
             </form>
 
@@ -286,20 +288,28 @@
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="footer-content">
-            <h2>CAMPUS <span>PULSE</span></h2>
-            <p>Learn More • Get Involved • Grow Together</p>
+            <h2>IRON <span>PULSE</span></h2>
+            <p>Train Hard • Lift Heavy • Grow Stronger</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="Gallary.html">Gallery</a>
+                <a href="Login.html">Sign In</a>
+                <a href="Signup.html">Join Now</a>
+                <a href="Member.html">Dashboard</a>
+            </div>
             <div class="social">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>© <span data-year>2026</span> Campus Pulse. All Rights Reserved.</p>
+            <p>© <span data-year>2026</span> Iron Pulse Gym. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- ONE shared JS file -->
-    <script defer src="../js/main.js"></script>
+    <!-- Shared JS -->
+    <script defer src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,327 @@
+/* =========================================================
+   IRON PULSE GYM — member.css (Member Dashboard)
+   ========================================================= */
+
+/* ---- Welcome banner ---- */
+.member-banner {
+  min-height: 62vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 25% 15%, rgba(255, 107, 26, 0.22), transparent 55%),
+    radial-gradient(ellipse at 80% 90%, #1a2230 0%, transparent 55%),
+    var(--bg);
+  overflow: hidden;
+  padding: 120px 5% 70px;
+}
+
+.member-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+}
+
+.member-avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grad);
+  color: #0b0d10;
+  font-size: 2.3rem;
+  margin: 0 auto 24px;
+  box-shadow: 0 14px 40px rgba(255, 107, 26, 0.45);
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.member-banner h1 {
+  margin-bottom: 14px;
+}
+
+.member-banner h1 span {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.member-banner .eyebrow {
+  margin-bottom: 14px;
+}
+
+.member-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.member-badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.member-badges span i {
+  color: var(--primary-2);
+}
+
+/* ---- Member stats ---- */
+.member-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  background: var(--bg-alt);
+}
+
+.member-stat {
+  text-align: center;
+  padding: 34px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.member-stat:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow), 0 0 34px rgba(255, 107, 26, 0.15);
+}
+
+.member-stat .stat-number {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3.2rem;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.member-stat p {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* ---- Quick action grid ---- */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.member-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease, border-color 0.4s ease;
+}
+
+.member-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 107, 26, 0.16), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 107, 26, 0.4);
+  box-shadow: var(--shadow), 0 0 40px rgba(255, 107, 26, 0.12);
+}
+
+.member-card:hover::before {
+  opacity: 1;
+}
+
+.member-card i {
+  font-size: 2.2rem;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 14px;
+  transition: transform 0.45s ease;
+}
+
+.member-card:hover i {
+  transform: scale(1.2) rotate(-8deg);
+}
+
+.member-card h3 {
+  margin-bottom: 8px;
+}
+
+.member-card p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.member-card .primary-btn,
+.member-card .secondary-btn {
+  padding: 12px 26px;
+  font-size: 0.78rem;
+}
+
+/* ---- Progress / schedule section ---- */
+.member-progress {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background: var(--bg-alt);
+}
+
+.progress-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 34px 30px;
+  box-shadow: var(--shadow);
+}
+
+.progress-card h3 {
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+}
+
+.progress-row {
+  margin-bottom: 20px;
+}
+
+.progress-row .progress-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.progress-row .progress-top strong {
+  color: var(--text);
+}
+
+.progress-track {
+  height: 10px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 10px;
+  background: var(--grad);
+  box-shadow: var(--shadow-glow);
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.class-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.class-item:last-child {
+  border-bottom: none;
+}
+
+.class-day {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.class-day strong {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.4rem;
+  color: var(--primary-2);
+  line-height: 1;
+}
+
+.class-day span {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.class-info {
+  flex: 1;
+}
+
+.class-info h4 {
+  font-size: 0.95rem;
+}
+
+.class-info p {
+  font-size: 0.8rem;
+}
+
+.class-status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  border-radius: 50px;
+  background: rgba(255, 107, 26, 0.12);
+  color: var(--primary-2);
+  white-space: nowrap;
+}
+
+.class-status.full {
+  background: rgba(255, 59, 59, 0.12);
+  color: var(--danger);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 992px) {
+  .member-stats,
+  .member-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .member-progress {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .member-stats,
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

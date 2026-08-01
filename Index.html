@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Campus Pulse - Academic support, student resources, and a vibrant campus community to help you thrive during college.">
-    <title>Campus Pulse | Home</title>
+    <meta name="description" content="Iron Pulse Gym - Train hard, build strength, and transform your body with expert coaching, premium equipment, and an unmatched fitness community.">
+    <title>Iron Pulse Gym | Home</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- ONE shared CSS file -->
+    <!-- Shared CSS -->
     <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -26,7 +26,9 @@
     <header>
 
         <div class="logo">
-            <h2>CAMPUS <span>PULSE</span></h2>
+            <a href="index.html" aria-label="Iron Pulse Gym - Home">
+                <h2>IRON <span>PULSE</span></h2>
+            </a>
         </div>
 
         <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
@@ -38,16 +40,16 @@
         <nav id="primary-nav" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="About/about.html">About</a></li>
-                <li><a href="Gallary/Gallary.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Gallary.html">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="mobile-join"><a href="Signup/Sign up.html">Enroll</a></li>
+                <li class="mobile-join"><a href="Signup.html">Join Now</a></li>
             </ul>
         </nav>
 
         <div class="nav-actions" id="headerActions">
-            <a href="Login/Login.html" class="login-btn-outline">Login</a>
-            <a href="Signup/Sign up.html" class="join-btn">Enroll</a>
+            <a href="Login.html" class="login-btn-outline">Login</a>
+            <a href="Signup.html" class="join-btn">Join Now</a>
         </div>
 
     </header>
@@ -57,125 +59,143 @@
         <div class="overlay"></div>
         <div class="hero-content">
             <div class="hero-status" id="heroStatus" hidden></div>
-            <h4>WELCOME TO CAMPUS PULSE</h4>
-            <h1>DISCOVER YOUR <span>CAMPUS STORY</span></h1>
+            <div class="hero-badges">
+                <span>🏋️ 24/7 Access</span>
+                <span>🔥 Expert Coaching</span>
+                <span>💪 Premium Equipment</span>
+            </div>
+            <h4>WELCOME TO IRON PULSE GYM</h4>
+            <h1>FORGE YOUR <span>BEST SELF</span></h1>
             <p>
-                Academic support, student resources, and a vibrant community
-                to help you thrive on campus and beyond.
+                World-class equipment, elite personal trainers, and a relentless community
+                built to help you crush every fitness goal — from first rep to final set.
             </p>
             <div class="hero-buttons">
-                <a href="Signup/Sign up.html" class="primary-btn">Get Started</a>
-                <a href="#gallery" class="secondary-btn">Explore</a>
+                <a href="Signup.html" class="primary-btn">Start Training</a>
+                <a href="#gallery" class="secondary-btn">Explore Gym</a>
             </div>
         </div>
     </section>
 
     <!-- ================= FEATURES ================= -->
     <section class="features">
-        <div class="feature-box">
-            <i class="fa-solid fa-book"></i>
-            <h3>Learning Resources</h3>
-            <p>Access study aids, workshops, and tools designed for student success.</p>
+        <div class="feature-box reveal">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h3>Strength Training</h3>
+            <p>Power racks, free weights, and machines engineered for serious muscle growth.</p>
         </div>
-        <div class="feature-box">
-            <i class="fa-solid fa-user-group"></i>
-            <h3>Peer Support</h3>
-            <p>Connect with mentors, clubs, and campus groups that help you grow.</p>
+        <div class="feature-box reveal reveal-delay-1">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h3>Cardio Zone</h3>
+            <p>High-energy cardio equipment with performance tracking to burn, sprint, and endure.</p>
         </div>
-        <div class="feature-box">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <h3>Campus Life</h3>
-            <p>Find balance with events, wellness programs, and student-led experiences.</p>
+        <div class="feature-box reveal reveal-delay-2">
+            <i class="fa-solid fa-user-tie"></i>
+            <h3>Pro Coaching</h3>
+            <p>Certified trainers craft personalized plans that push you past every plateau.</p>
         </div>
     </section>
 
     <!-- ================= ABOUT ================= -->
     <section id="about">
-        <div class="about-image" aria-label="Campus Pulse student hub"></div>
-        <div class="about-content">
-            <h2>Why Choose Campus Pulse?</h2>
+        <div class="about-image reveal" aria-label="Iron Pulse Gym training floor"></div>
+        <div class="about-content reveal reveal-delay-1">
+            <p class="eyebrow">Train with purpose</p>
+            <h2>Why Iron Pulse Gym?</h2>
             <p>
-                Campus Pulse provides a complete student experience with
-                collaborative spaces, academic guidance, inspiring events,
-                and a community where everyone can thrive.
+                Iron Pulse Gym is more than a gym — it's a forge where discipline meets
+                dedication. From sunrise lifts to late-night grind sessions, our facility
+                and coaches keep you moving toward a stronger you.
             </p>
             <ul>
-                <li>✔ Student Resources</li>
-                <li>✔ Collaborative Study Hubs</li>
-                <li>✔ Wellness &amp; Support</li>
-                <li>✔ Inclusive Community</li>
-                <li>✔ Success for Everyone</li>
+                <li>Premium Equipment</li>
+                <li>Certified Personal Trainers</li>
+                <li>Group Classes &amp; HIIT</li>
+                <li>Nutrition &amp; Recovery Support</li>
+                <li>24/7 Member Access</li>
             </ul>
-            <a href="About/about.html" class="primary-btn">Read More</a>
+            <a href="about.html" class="primary-btn">Read More</a>
         </div>
     </section>
 
     <!-- ================= STATISTICS ================= -->
     <section class="statistics">
-        <div class="stat">
-            <span class="stat-number" data-target="500">0</span>
-            <p>Active Students</p>
+        <div class="stat reveal">
+            <span class="stat-number" data-target="2500">0</span>
+            <p>Active Members</p>
         </div>
-        <div class="stat">
-            <span class="stat-number" data-target="25">0</span>
-            <p>Peer Mentors</p>
+        <div class="stat reveal reveal-delay-1">
+            <span class="stat-number" data-target="40">0</span>
+            <p>Expert Trainers</p>
         </div>
-        <div class="stat">
+        <div class="stat reveal reveal-delay-2">
             <span class="stat-number" data-target="98">0</span>
-            <p>Student Satisfaction</p>
+            <p>Member Satisfaction</p>
+        </div>
+        <div class="stat reveal reveal-delay-3">
+            <span class="stat-number" data-target="15">0</span>
+            <p>Group Classes Daily</p>
         </div>
     </section>
 
     <!-- ================= GALLERY ================= -->
     <section id="gallery">
-        <h2 class="section-title">Campus Showcase</h2>
+        <h2 class="section-title reveal">Inside The Iron Temple</h2>
         <div class="gallery">
-            <div class="gallery-card card-1">
-                <div class="gallery-label"><i class="fa-solid fa-graduation-cap"></i> Student Life</div>
+            <div class="gallery-card card-1 reveal">
+                <div class="gallery-label"><i class="fa-solid fa-dumbbell"></i> Free Weights</div>
             </div>
-            <div class="gallery-card card-2">
-                <div class="gallery-label"><i class="fa-solid fa-users"></i> Clubs</div>
+            <div class="gallery-card card-2 reveal reveal-delay-1">
+                <div class="gallery-label"><i class="fa-solid fa-bolt"></i> HIIT Zone</div>
             </div>
-            <div class="gallery-card card-3">
-                <div class="gallery-label"><i class="fa-solid fa-lightbulb"></i> Innovation</div>
+            <div class="gallery-card card-3 reveal reveal-delay-2">
+                <div class="gallery-label"><i class="fa-solid fa-person-running"></i> Cardio Arena</div>
             </div>
-            <div class="gallery-card card-4">
-                <div class="gallery-label"><i class="fa-solid fa-calendar-days"></i> Events</div>
+            <div class="gallery-card card-4 reveal">
+                <div class="gallery-label"><i class="fa-solid fa-users"></i> Group Classes</div>
             </div>
-            <div class="gallery-card card-5">
-                <div class="gallery-label"><i class="fa-solid fa-heart"></i> Wellness</div>
+            <div class="gallery-card card-5 reveal reveal-delay-1">
+                <div class="gallery-label"><i class="fa-solid fa-heart"></i> Recovery Lab</div>
             </div>
-            <div class="gallery-card card-6">
-                <div class="gallery-label"><i class="fa-solid fa-apple-whole"></i> Support</div>
+            <div class="gallery-card card-6 reveal reveal-delay-2">
+                <div class="gallery-label"><i class="fa-solid fa-apple-whole"></i> Nutrition Bar</div>
             </div>
         </div>
     </section>
 
     <!-- ================= CONTACT ================= -->
     <section id="contact">
-        <h2 class="section-title">Contact Us</h2>
-        <p><strong>Email:</strong> hello@campuspulse.edu</p>
-        <p><strong>Phone:</strong> +91 98204 60508</p>
-        <p><strong>Address:</strong> Campus Pulse Student Center, Navi Mumbai, Maharashtra 400706, India</p>
-        <p><strong>Enrollment options:</strong> online registration, campus events, or visit the student center.</p>
+        <h2 class="section-title reveal">Contact Us</h2>
+        <p class="reveal"><strong>Email:</strong> hello@ironpulse.fit</p>
+        <p class="reveal reveal-delay-1"><strong>Phone:</strong> +91 98204 60508</p>
+        <p class="reveal reveal-delay-2"><strong>Address:</strong> Iron Pulse Gym, Navi Mumbai, Maharashtra 400706, India</p>
+        <p class="reveal reveal-delay-3"><strong>Membership options:</strong> online enrollment, on-site tours, or visit our front desk.</p>
     </section>
 
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="footer-content">
-            <h2>CAMPUS <span>PULSE</span></h2>
-            <p>Learn More • Get Involved • Grow Together</p>
+            <h2>IRON <span>PULSE</span></h2>
+            <p>Train Hard • Lift Heavy • Grow Stronger</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="Gallary.html">Gallery</a>
+                <a href="Login.html">Sign In</a>
+                <a href="Signup.html">Join Now</a>
+                <a href="Member.html">Dashboard</a>
+            </div>
             <div class="social">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>© <span data-year>2026</span> Campus Pulse. All Rights Reserved.</p>
+            <p>© <span data-year>2026</span> Iron Pulse Gym. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- ONE shared JS file -->
+    <!-- Shared JS -->
     <script defer src="js/main.js"></script>
 
 </body>

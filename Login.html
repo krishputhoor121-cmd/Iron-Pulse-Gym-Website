@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Campus Pulse Student Portal - Sign in to access campus resources, events, and student tools.">
-    <title>Student Sign In | Campus Pulse</title>
+    <meta name="description" content="Iron Pulse Gym Member Portal - Sign in to access your training plans, class bookings, and progress tracking.">
+    <title>Member Sign In | Iron Pulse Gym</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- Shared CSS + auth CSS -->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
 </head>
 
 <body>
@@ -26,7 +26,9 @@
     <header>
 
         <div class="logo">
-            <h2>CAMPUS <span>PULSE</span></h2>
+            <a href="index.html" aria-label="Iron Pulse Gym - Home">
+                <h2>IRON <span>PULSE</span></h2>
+            </a>
         </div>
 
         <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
@@ -37,17 +39,17 @@
 
         <nav id="primary-nav" aria-label="Primary navigation">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../About/about.html">About</a></li>
-                <li><a href="../Gallary/Gallary.html">Gallery</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-                <li class="mobile-join"><a href="../Signup/Sign up.html">Enroll</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Gallary.html">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li class="mobile-join"><a href="Signup.html">Join Now</a></li>
             </ul>
         </nav>
 
         <div class="nav-actions" id="headerActions">
             <a href="Login.html" class="login-btn-outline">Login</a>
-            <a href="../Signup/Sign up.html" class="join-btn">Enroll</a>
+            <a href="Signup.html" class="join-btn">Join Now</a>
         </div>
 
     </header>
@@ -60,22 +62,22 @@
             <div class="auth-brand-panel">
                 <div>
                     <div class="brand-logo">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <h2>CAMPUS <span>PULSE</span></h2>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <h2>IRON <span>PULSE</span></h2>
                     </div>
 
-                    <h3 class="brand-panel-title">Welcome Back, <span>Student!</span></h3>
-                    <p class="brand-panel-subtitle">Your campus journey continues here. Sign in to unlock student resources, event registration, and more.</p>
+                    <h3 class="brand-panel-title">Welcome Back, <span>Champion!</span></h3>
+                    <p class="brand-panel-subtitle">Your gains are waiting. Sign in to unlock training plans, class bookings, and your personal progress tracker.</p>
 
                     <div class="brand-perks">
-                        <div class="brand-perk"><i class="fa-solid fa-id-card"></i> Student ID Access</div>
-                        <div class="brand-perk"><i class="fa-solid fa-calendar-days"></i> Event Bookings</div>
+                        <div class="brand-perk"><i class="fa-solid fa-id-card"></i> Member ID Access</div>
+                        <div class="brand-perk"><i class="fa-solid fa-calendar-days"></i> Class Bookings</div>
                         <div class="brand-perk"><i class="fa-solid fa-chart-line"></i> Progress Trackers</div>
-                        <div class="brand-perk"><i class="fa-solid fa-fire"></i> Campus Challenges</div>
+                        <div class="brand-perk"><i class="fa-solid fa-fire"></i> Training Challenges</div>
                     </div>
                 </div>
 
-                <a href="../index.html" class="back-home-link">
+                <a href="index.html" class="back-home-link">
                     <i class="fa-solid fa-arrow-left"></i> Back to Home
                 </a>
             </div>
@@ -83,27 +85,27 @@
             <!-- Right Login Card -->
             <div class="auth-card-panel">
                 <div class="auth-card-icon"><i class="fa-solid fa-right-to-bracket"></i></div>
-                <h1 class="auth-card-title">Student Sign In</h1>
+                <h1 class="auth-card-title">Member Sign In</h1>
                 <p class="auth-card-subtitle">Step back in and pick up where your last session left off.</p>
 
                 <div class="access-highlights">
                     <span><i class="fa-solid fa-bolt"></i> Quick Access</span>
                     <span><i class="fa-solid fa-shield-halved"></i> Secure</span>
-                    <span><i class="fa-solid fa-fire"></i> Progress Ready</span>
+                    <span><i class="fa-solid fa-fire"></i> Gains Ready</span>
                 </div>
 
                 <div class="auth-switch-card">
                     <div>
                         <strong>New here?</strong>
-                        <p>Create your student profile in a few taps and unlock campus access.</p>
+                        <p>Create your member profile in a few taps and unlock the iron temple.</p>
                     </div>
-                    <a href="../Signup/Sign up.html" class="auth-switch-btn">Enroll Now</a>
+                    <a href="Signup.html" class="auth-switch-btn">Join Now</a>
                 </div>
 
                 <!-- Just-Joined Welcome State -->
                 <div class="just-joined-banner" id="justJoinedBanner">
                     <i class="fa-solid fa-circle-check"></i>
-                    <span><strong>Account created!</strong> Sign in below to activate your Campus Pulse access.</span>
+                    <span><strong>Membership created!</strong> Sign in below to activate your Iron Pulse access.</span>
                 </div>
 
                 <!-- Standalone Login Form -->
@@ -156,8 +158,8 @@
                 </form>
 
                 <div class="switch-auth-link">
-                    Don't have a campus profile yet?<br>
-                    <a href="../Signup/Sign up.html">Enroll as a Student Here &rarr;</a>
+                    Don't have a membership yet?<br>
+                    <a href="Signup.html">Join as a Member Here &rarr;</a>
                 </div>
             </div>
 
@@ -167,20 +169,28 @@
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="footer-content">
-            <h2>CAMPUS <span>PULSE</span></h2>
-            <p>Learn More • Get Involved • Grow Together</p>
+            <h2>IRON <span>PULSE</span></h2>
+            <p>Train Hard • Lift Heavy • Grow Stronger</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="Gallary.html">Gallery</a>
+                <a href="Login.html">Sign In</a>
+                <a href="Signup.html">Join Now</a>
+                <a href="Member.html">Dashboard</a>
+            </div>
             <div class="social">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>© <span data-year>2026</span> Campus Pulse. All Rights Reserved.</p>
+            <p>© <span data-year>2026</span> Iron Pulse Gym. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- ONE shared JS file -->
-    <script defer src="../js/main.js"></script>
+    <!-- Shared JS -->
+    <script defer src="js/main.js"></script>
 </body>
 
 </html>
